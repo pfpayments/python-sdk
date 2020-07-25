@@ -32,6 +32,7 @@ from .payment_processor_service_api import PaymentProcessorServiceApi
 from .permission_service_api import PermissionServiceApi
 from .refund_comment_service_api import RefundCommentServiceApi
 from .refund_service_api import RefundServiceApi
+from .shopify_transaction_service_api import ShopifyTransactionServiceApi
 from .space_service_api import SpaceServiceApi
 from .static_value_service_api import StaticValueServiceApi
 from .transaction_comment_service_api import TransactionCommentServiceApi

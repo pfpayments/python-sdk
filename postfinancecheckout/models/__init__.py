@@ -128,6 +128,9 @@ from .role import Role
 from .sales_channel import SalesChannel
 from .scope import Scope
 from .server_error import ServerError
+from .shopify_integration import ShopifyIntegration
+from .shopify_integration_app_version import ShopifyIntegrationAppVersion
+from .shopify_transaction_state import ShopifyTransactionState
 from .space import Space
 from .space_address import SpaceAddress
 from .space_address_create import SpaceAddressCreate
@@ -186,8 +189,10 @@ from .customer_create import CustomerCreate
 from .delivery_indication import DeliveryIndication
 from .human_user_create import HumanUserCreate
 from .human_user_update import HumanUserUpdate
+from .payment_terminal_contact_address import PaymentTerminalContactAddress
 from .refund_comment_active import RefundCommentActive
 from .refund_comment_create import RefundCommentCreate
+from .shopify_transaction import ShopifyTransaction
 from .space_create import SpaceCreate
 from .space_update import SpaceUpdate
 from .transaction_comment_active import TransactionCommentActive

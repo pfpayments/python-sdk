@@ -32,6 +32,7 @@ from postfinancecheckout.api.payment_processor_service_api import PaymentProcess
 from postfinancecheckout.api.permission_service_api import PermissionServiceApi
 from postfinancecheckout.api.refund_comment_service_api import RefundCommentServiceApi
 from postfinancecheckout.api.refund_service_api import RefundServiceApi
+from postfinancecheckout.api.shopify_transaction_service_api import ShopifyTransactionServiceApi
 from postfinancecheckout.api.space_service_api import SpaceServiceApi
 from postfinancecheckout.api.static_value_service_api import StaticValueServiceApi
 from postfinancecheckout.api.transaction_comment_service_api import TransactionCommentServiceApi
@@ -180,6 +181,9 @@ from postfinancecheckout.models.role import Role
 from postfinancecheckout.models.sales_channel import SalesChannel
 from postfinancecheckout.models.scope import Scope
 from postfinancecheckout.models.server_error import ServerError
+from postfinancecheckout.models.shopify_integration import ShopifyIntegration
+from postfinancecheckout.models.shopify_integration_app_version import ShopifyIntegrationAppVersion
+from postfinancecheckout.models.shopify_transaction_state import ShopifyTransactionState
 from postfinancecheckout.models.space import Space
 from postfinancecheckout.models.space_address import SpaceAddress
 from postfinancecheckout.models.space_address_create import SpaceAddressCreate
@@ -238,8 +242,10 @@ from postfinancecheckout.models.customer_create import CustomerCreate
 from postfinancecheckout.models.delivery_indication import DeliveryIndication
 from postfinancecheckout.models.human_user_create import HumanUserCreate
 from postfinancecheckout.models.human_user_update import HumanUserUpdate
+from postfinancecheckout.models.payment_terminal_contact_address import PaymentTerminalContactAddress
 from postfinancecheckout.models.refund_comment_active import RefundCommentActive
 from postfinancecheckout.models.refund_comment_create import RefundCommentCreate
+from postfinancecheckout.models.shopify_transaction import ShopifyTransaction
 from postfinancecheckout.models.space_create import SpaceCreate
 from postfinancecheckout.models.space_update import SpaceUpdate
 from postfinancecheckout.models.transaction_comment_active import TransactionCommentActive

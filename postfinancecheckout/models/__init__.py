@@ -7,8 +7,10 @@ from .abstract_customer_active import AbstractCustomerActive
 from .abstract_customer_address_active import AbstractCustomerAddressActive
 from .abstract_customer_comment_active import AbstractCustomerCommentActive
 from .abstract_human_user_update import AbstractHumanUserUpdate
+from .abstract_payment_link_update import AbstractPaymentLinkUpdate
 from .abstract_refund_comment_active import AbstractRefundCommentActive
 from .abstract_space_update import AbstractSpaceUpdate
+from .abstract_token_update import AbstractTokenUpdate
 from .abstract_transaction_comment_active import AbstractTransactionCommentActive
 from .abstract_transaction_invoice_comment_active import AbstractTransactionInvoiceCommentActive
 from .abstract_transaction_pending import AbstractTransactionPending
@@ -48,6 +50,7 @@ from .database_translated_string import DatabaseTranslatedString
 from .database_translated_string_item import DatabaseTranslatedStringItem
 from .delivery_indication_decision_reason import DeliveryIndicationDecisionReason
 from .delivery_indication_state import DeliveryIndicationState
+from .document_template import DocumentTemplate
 from .document_template_type import DocumentTemplateType
 from .document_template_type_group import DocumentTemplateTypeGroup
 from .entity_export_request import EntityExportRequest
@@ -91,6 +94,9 @@ from .payment_contract_state import PaymentContractState
 from .payment_contract_type import PaymentContractType
 from .payment_information_hash import PaymentInformationHash
 from .payment_information_hash_type import PaymentInformationHashType
+from .payment_link import PaymentLink
+from .payment_link_protection_mode import PaymentLinkProtectionMode
+from .payment_link_update import PaymentLinkUpdate
 from .payment_method import PaymentMethod
 from .payment_method_brand import PaymentMethodBrand
 from .payment_method_configuration import PaymentMethodConfiguration
@@ -128,8 +134,10 @@ from .role import Role
 from .sales_channel import SalesChannel
 from .scope import Scope
 from .server_error import ServerError
+from .shopify_additional_line_item_data import ShopifyAdditionalLineItemData
 from .shopify_integration import ShopifyIntegration
-from .shopify_integration_app_version import ShopifyIntegrationAppVersion
+from .shopify_integration_payment_app_version import ShopifyIntegrationPaymentAppVersion
+from .shopify_integration_subscription_app_version import ShopifyIntegrationSubscriptionAppVersion
 from .shopify_transaction_state import ShopifyTransactionState
 from .space import Space
 from .space_address import SpaceAddress
@@ -147,6 +155,7 @@ from .tokenization_mode import TokenizationMode
 from .transaction import Transaction
 from .transaction_aware_entity import TransactionAwareEntity
 from .transaction_comment import TransactionComment
+from .transaction_completion_behavior import TransactionCompletionBehavior
 from .transaction_completion_mode import TransactionCompletionMode
 from .transaction_completion_request import TransactionCompletionRequest
 from .transaction_completion_state import TransactionCompletionState
@@ -189,12 +198,16 @@ from .customer_create import CustomerCreate
 from .delivery_indication import DeliveryIndication
 from .human_user_create import HumanUserCreate
 from .human_user_update import HumanUserUpdate
+from .payment_link_active import PaymentLinkActive
+from .payment_link_create import PaymentLinkCreate
 from .payment_terminal_contact_address import PaymentTerminalContactAddress
 from .refund_comment_active import RefundCommentActive
 from .refund_comment_create import RefundCommentCreate
 from .shopify_transaction import ShopifyTransaction
 from .space_create import SpaceCreate
 from .space_update import SpaceUpdate
+from .token_create import TokenCreate
+from .token_update import TokenUpdate
 from .transaction_comment_active import TransactionCommentActive
 from .transaction_comment_create import TransactionCommentCreate
 from .transaction_completion import TransactionCompletion

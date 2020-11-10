@@ -16,6 +16,8 @@ from .customer_address_service_api import CustomerAddressServiceApi
 from .customer_comment_service_api import CustomerCommentServiceApi
 from .customer_service_api import CustomerServiceApi
 from .delivery_indication_service_api import DeliveryIndicationServiceApi
+from .document_template_service_api import DocumentTemplateServiceApi
+from .document_template_type_service_api import DocumentTemplateTypeServiceApi
 from .human_user_service_api import HumanUserServiceApi
 from .label_description_group_service_api import LabelDescriptionGroupServiceApi
 from .label_description_service_api import LabelDescriptionServiceApi
@@ -24,6 +26,7 @@ from .legal_organization_form_service_api import LegalOrganizationFormServiceApi
 from .manual_task_service_api import ManualTaskServiceApi
 from .payment_connector_configuration_service_api import PaymentConnectorConfigurationServiceApi
 from .payment_connector_service_api import PaymentConnectorServiceApi
+from .payment_link_service_api import PaymentLinkServiceApi
 from .payment_method_brand_service_api import PaymentMethodBrandServiceApi
 from .payment_method_configuration_service_api import PaymentMethodConfigurationServiceApi
 from .payment_method_service_api import PaymentMethodServiceApi
@@ -35,6 +38,8 @@ from .refund_service_api import RefundServiceApi
 from .shopify_transaction_service_api import ShopifyTransactionServiceApi
 from .space_service_api import SpaceServiceApi
 from .static_value_service_api import StaticValueServiceApi
+from .token_service_api import TokenServiceApi
+from .token_version_service_api import TokenVersionServiceApi
 from .transaction_comment_service_api import TransactionCommentServiceApi
 from .transaction_completion_service_api import TransactionCompletionServiceApi
 from .transaction_iframe_service_api import TransactionIframeServiceApi

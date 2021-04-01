@@ -21,6 +21,15 @@ from .account_state import AccountState
 from .account_type import AccountType
 from .address import Address
 from .address_create import AddressCreate
+from .bank_account import BankAccount
+from .bank_account_environment import BankAccountEnvironment
+from .bank_account_state import BankAccountState
+from .bank_account_type import BankAccountType
+from .bank_transaction import BankTransaction
+from .bank_transaction_flow_direction import BankTransactionFlowDirection
+from .bank_transaction_source import BankTransactionSource
+from .bank_transaction_state import BankTransactionState
+from .bank_transaction_type import BankTransactionType
 from .charge_attempt_environment import ChargeAttemptEnvironment
 from .charge_attempt_state import ChargeAttemptState
 from .charge_flow import ChargeFlow
@@ -38,6 +47,7 @@ from .condition_type import ConditionType
 from .connector_invocation_stage import ConnectorInvocationStage
 from .creation_entity_state import CreationEntityState
 from .criteria_operator import CriteriaOperator
+from .currency_bank_account import CurrencyBankAccount
 from .customer import Customer
 from .customer_address import CustomerAddress
 from .customer_address_type import CustomerAddressType
@@ -60,12 +70,14 @@ from .entity_query_filter_type import EntityQueryFilterType
 from .entity_query_order_by import EntityQueryOrderBy
 from .entity_query_order_by_type import EntityQueryOrderByType
 from .environment import Environment
+from .external_transfer_bank_transaction import ExternalTransferBankTransaction
 from .failure_category import FailureCategory
 from .failure_reason import FailureReason
 from .feature import Feature
 from .feature_category import FeatureCategory
 from .gender import Gender
 from .human_user import HumanUser
+from .internal_transfer_bank_transaction import InternalTransferBankTransaction
 from .label import Label
 from .label_descriptor import LabelDescriptor
 from .label_descriptor_category import LabelDescriptorCategory
@@ -86,6 +98,8 @@ from .manual_task_action_style import ManualTaskActionStyle
 from .manual_task_state import ManualTaskState
 from .manual_task_type import ManualTaskType
 from .one_click_payment_mode import OneClickPaymentMode
+from .payment_adjustment import PaymentAdjustment
+from .payment_adjustment_type import PaymentAdjustmentType
 from .payment_connector import PaymentConnector
 from .payment_connector_configuration import PaymentConnectorConfiguration
 from .payment_connector_feature import PaymentConnectorFeature
@@ -95,6 +109,7 @@ from .payment_contract_type import PaymentContractType
 from .payment_information_hash import PaymentInformationHash
 from .payment_information_hash_type import PaymentInformationHashType
 from .payment_link import PaymentLink
+from .payment_link_address_handling_mode import PaymentLinkAddressHandlingMode
 from .payment_link_protection_mode import PaymentLinkProtectionMode
 from .payment_link_update import PaymentLinkUpdate
 from .payment_method import PaymentMethod
@@ -186,6 +201,7 @@ from .application_user_create import ApplicationUserCreate
 from .application_user_update import ApplicationUserUpdate
 from .charge import Charge
 from .charge_attempt import ChargeAttempt
+from .charge_bank_transaction import ChargeBankTransaction
 from .charge_flow_level import ChargeFlowLevel
 from .charge_flow_level_payment_link import ChargeFlowLevelPaymentLink
 from .connector_invocation import ConnectorInvocation
@@ -200,9 +216,10 @@ from .human_user_create import HumanUserCreate
 from .human_user_update import HumanUserUpdate
 from .payment_link_active import PaymentLinkActive
 from .payment_link_create import PaymentLinkCreate
-from .payment_terminal_contact_address import PaymentTerminalContactAddress
+from .refund_bank_transaction import RefundBankTransaction
 from .refund_comment_active import RefundCommentActive
 from .refund_comment_create import RefundCommentCreate
+from .refund_recovery_bank_transaction import RefundRecoveryBankTransaction
 from .shopify_transaction import ShopifyTransaction
 from .space_create import SpaceCreate
 from .space_update import SpaceUpdate

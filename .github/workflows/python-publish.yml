@@ -30,20 +30,14 @@ jobs:
         python-version: ${{ matrix.python-version }}
           
     - name: Install dependencies with ${{ matrix.python-version }}
-      with:
-        python-version: ${{ matrix.python-version }}
       run: |
         python -m pip install --upgrade pip
         pip install -r test-requirements.txt
         python -m pip install build --user
 
     - name: Build package with ${{ matrix.python-version }}
-      with:
-        python-version: ${{ matrix.python-version }}
       run: |
          echo "Starting build .."
          python -m unittest discover -s test/ -p 'test_*.py'
     - name: Build Tar Ball
-      with:
-        python-version: ${{ matrix.python-version }}
       run: python -m build --sdist --outdir dist/ .

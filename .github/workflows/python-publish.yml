@@ -41,3 +41,7 @@ jobs:
          python -m unittest discover -s test/ -p 'test_*.py'
     - name: Build Tar Ball
       run: python -m build --sdist --outdir dist/ .
+    - name: Publish package
+      uses: pypa/gh-action-pypi-publish@master
+      with:
+        password: ${{ secrets.PYPI_API_TOKEN }}

@@ -3,6 +3,7 @@
 from __future__ import absolute_import
 
 from postfinancecheckout.api.account_service_api import AccountServiceApi
+from postfinancecheckout.api.analytics_query_service_api import AnalyticsQueryServiceApi
 from postfinancecheckout.api.application_user_service_api import ApplicationUserServiceApi
 from postfinancecheckout.api.bank_account_service_api import BankAccountServiceApi
 from postfinancecheckout.api.bank_transaction_service_api import BankTransactionServiceApi
@@ -102,6 +103,12 @@ from postfinancecheckout.models.account_state import AccountState
 from postfinancecheckout.models.account_type import AccountType
 from postfinancecheckout.models.address import Address
 from postfinancecheckout.models.address_create import AddressCreate
+from postfinancecheckout.models.analytics_query import AnalyticsQuery
+from postfinancecheckout.models.analytics_query_execution import AnalyticsQueryExecution
+from postfinancecheckout.models.analytics_query_execution_state import AnalyticsQueryExecutionState
+from postfinancecheckout.models.analytics_query_result_batch import AnalyticsQueryResultBatch
+from postfinancecheckout.models.analytics_schema_column import AnalyticsSchemaColumn
+from postfinancecheckout.models.analytics_schema_table import AnalyticsSchemaTable
 from postfinancecheckout.models.bank_account import BankAccount
 from postfinancecheckout.models.bank_account_environment import BankAccountEnvironment
 from postfinancecheckout.models.bank_account_state import BankAccountState

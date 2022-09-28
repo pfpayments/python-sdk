@@ -22,6 +22,12 @@ from .account_state import AccountState
 from .account_type import AccountType
 from .address import Address
 from .address_create import AddressCreate
+from .analytics_query import AnalyticsQuery
+from .analytics_query_execution import AnalyticsQueryExecution
+from .analytics_query_execution_state import AnalyticsQueryExecutionState
+from .analytics_query_result_batch import AnalyticsQueryResultBatch
+from .analytics_schema_column import AnalyticsSchemaColumn
+from .analytics_schema_table import AnalyticsSchemaTable
 from .bank_account import BankAccount
 from .bank_account_environment import BankAccountEnvironment
 from .bank_account_state import BankAccountState

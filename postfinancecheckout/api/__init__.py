@@ -3,7 +3,6 @@
 from __future__ import absolute_import
 
 from .account_service_api import AccountServiceApi
-from .analytics_query_service_api import AnalyticsQueryServiceApi
 from .application_user_service_api import ApplicationUserServiceApi
 from .bank_account_service_api import BankAccountServiceApi
 from .bank_transaction_service_api import BankTransactionServiceApi

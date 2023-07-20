@@ -28,6 +28,7 @@ from .analytics_query_execution_state import AnalyticsQueryExecutionState
 from .analytics_query_result_batch import AnalyticsQueryResultBatch
 from .analytics_schema_column import AnalyticsSchemaColumn
 from .analytics_schema_table import AnalyticsSchemaTable
+from .authenticated_card_data_create import AuthenticatedCardDataCreate
 from .bank_account import BankAccount
 from .bank_account_environment import BankAccountEnvironment
 from .bank_account_state import BankAccountState
@@ -37,6 +38,13 @@ from .bank_transaction_flow_direction import BankTransactionFlowDirection
 from .bank_transaction_source import BankTransactionSource
 from .bank_transaction_state import BankTransactionState
 from .bank_transaction_type import BankTransactionType
+from .card_authentication_response import CardAuthenticationResponse
+from .card_authentication_version import CardAuthenticationVersion
+from .card_cryptogram import CardCryptogram
+from .card_cryptogram_create import CardCryptogramCreate
+from .card_cryptogram_type import CardCryptogramType
+from .cardholder_authentication import CardholderAuthentication
+from .cardholder_authentication_create import CardholderAuthenticationCreate
 from .charge_attempt_environment import ChargeAttemptEnvironment
 from .charge_attempt_state import ChargeAttemptState
 from .charge_flow import ChargeFlow
@@ -63,8 +71,6 @@ from .customer_postal_address import CustomerPostalAddress
 from .customer_postal_address_create import CustomerPostalAddressCreate
 from .customers_presence import CustomersPresence
 from .data_collection_type import DataCollectionType
-from .database_translated_string import DatabaseTranslatedString
-from .database_translated_string_item import DatabaseTranslatedStringItem
 from .delivery_indication_decision_reason import DeliveryIndicationDecisionReason
 from .delivery_indication_state import DeliveryIndicationState
 from .document_template import DocumentTemplate
@@ -151,6 +157,7 @@ from .payment_terminal_transaction_summary import PaymentTerminalTransactionSumm
 from .payment_terminal_transaction_summary_fetch_request import PaymentTerminalTransactionSummaryFetchRequest
 from .payment_terminal_type import PaymentTerminalType
 from .permission import Permission
+from .recurring_indicator import RecurringIndicator
 from .refund import Refund
 from .refund_comment import RefundComment
 from .refund_create import RefundCreate
@@ -222,6 +229,8 @@ from .token_version import TokenVersion
 from .token_version_state import TokenVersionState
 from .token_version_type import TokenVersionType
 from .tokenization_mode import TokenizationMode
+from .tokenized_card_data import TokenizedCardData
+from .tokenized_card_data_create import TokenizedCardDataCreate
 from .transaction import Transaction
 from .transaction_aware_entity import TransactionAwareEntity
 from .transaction_comment import TransactionComment
@@ -256,6 +265,7 @@ from .account_update import AccountUpdate
 from .application_user import ApplicationUser
 from .application_user_create import ApplicationUserCreate
 from .application_user_update import ApplicationUserUpdate
+from .authenticated_card_data import AuthenticatedCardData
 from .charge import Charge
 from .charge_attempt import ChargeAttempt
 from .charge_bank_transaction import ChargeBankTransaction

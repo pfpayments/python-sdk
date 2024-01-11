@@ -76,5 +76,7 @@ from .transaction_terminal_service_api import TransactionTerminalServiceApi
 from .transaction_void_service_api import TransactionVoidServiceApi
 from .user_account_role_service_api import UserAccountRoleServiceApi
 from .user_space_role_service_api import UserSpaceRoleServiceApi
+from .web_app_service_api import WebAppServiceApi
+from .webhook_encryption_service_api import WebhookEncryptionServiceApi
 from .webhook_listener_service_api import WebhookListenerServiceApi
 from .webhook_url_service_api import WebhookUrlServiceApi

@@ -1,36 +1,40 @@
 [![Build Status](https://travis-ci.org/pfpayments/python-sdk.svg?branch=master)](https://travis-ci.org/pfpayments/python-sdk)
 
-# PostFinance Checkout Python Library
+# PostFinance Checkout Python SDK
 
-The PostFinance Checkout Python library wraps around the PostFinance Checkout API. This library facilitates your interaction with various services such as transactions, accounts, and subscriptions.
+Python SDK to access PostFinance Checkout web services API.
 
-## Documentation
+Library facilitates your interaction with various services such as transactions, accounts, and subscriptions.
+
+## API documentation
 
 [PostFinance Checkout Web Service API](https://checkout.postfinance.ch/doc/api/web-service)
 
 ## Requirements
 
-- Python 3.5+
+- Python 3.7+
 
 ## Installation
 
-### pip install (recommended)
+### pip3 install (recommended)
 ```sh
-pip install --upgrade postfinancecheckout
+pip3 install --upgrade postfinancecheckout
 ```
 
-### pip install from source via github
+### pip3 install from source via github
 
 ```sh
-pip install git+http://github.com/pfpayments/python-sdk.git
+pip3 install git+http://github.com/pfpayments/python-sdk.git
 ```
-(you may need to run `pip` with root permission: `sudo pip install git+http://github.com/pfpayments/python-sdk.git` )
+(you may need to run `pip3` with root permission: `sudo pip3 install git+http://github.com/pfpayments/python-sdk.git` )
 
 ### install from source via Setuptools
 
 Install via [Setuptools](http://pypi.python.org/pypi/setuptools).
 
 ```sh
+pip3 install setuptools
+
 python setup.py install
 ```
 (or `sudo python setup.py install` to install the package for all users)

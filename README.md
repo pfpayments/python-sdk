@@ -21,7 +21,7 @@ Library facilitates your interaction with various services such as transactions,
 pip3 install --upgrade postfinancecheckout
 ```
 
-### pip3 install from source via github
+### pip3 install from source via GitHub
 
 ```sh
 pip3 install git+http://github.com/pfpayments/python-sdk.git
@@ -49,7 +49,6 @@ You can also optionally set `default_headers` to set some headers that will be s
 ```python
 from postfinancecheckout import Configuration
 from postfinancecheckout.api import TransactionServiceApi, TransactionPaymentPageServiceApi
-from postfinancecheckout.models import LineItem, LineItemType, TransactionCreate
 
 space_id = 405
 

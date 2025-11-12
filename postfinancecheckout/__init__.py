@@ -23,7 +23,7 @@ limitations under the License.
 """
 
 
-__version__ = "6.0.0"
+__version__ = "6.1.0"
 
 from postfinancecheckout.service.accounts_service import AccountsService
 from postfinancecheckout.service.analytics_queries_service import AnalyticsQueriesService

@@ -1,5 +1,7 @@
 # coding: utf-8
 
+# flake8: noqa
+
 """
 PostFinance Python SDK
 
@@ -23,8 +25,9 @@ limitations under the License.
 """
 
 
-__version__ = "6.1.0"
+__version__ = "6.2.0"
 
+# import apis into sdk package
 from postfinancecheckout.service.accounts_service import AccountsService
 from postfinancecheckout.service.analytics_queries_service import AnalyticsQueriesService
 from postfinancecheckout.service.application_users_service import ApplicationUsersService
@@ -113,7 +116,7 @@ from postfinancecheckout.service.webhook_encryption_keys_service import WebhookE
 from postfinancecheckout.service.webhook_listeners_service import WebhookListenersService
 from postfinancecheckout.service.webhook_urls_service import WebhookURLsService
 
-
+# import ApiClient
 from postfinancecheckout.api_response import ApiResponse
 from postfinancecheckout.api_client import ApiClient
 from postfinancecheckout.configuration import Configuration
@@ -123,7 +126,12 @@ from postfinancecheckout.exceptions import ApiValueError
 from postfinancecheckout.exceptions import ApiKeyError
 from postfinancecheckout.exceptions import ApiAttributeError
 from postfinancecheckout.exceptions import ApiException
+from postfinancecheckout.postfinancecheckout_sdk_exception import PostFinanceCheckoutSdkException
 
+# import utils into sdk package
+from postfinancecheckout.utils.encryption_util import EncryptionUtil
+
+# import models into sdk package
 from postfinancecheckout.models.abstract_account_update import AbstractAccountUpdate
 from postfinancecheckout.models.abstract_application_user_update import AbstractApplicationUserUpdate
 from postfinancecheckout.models.abstract_customer_active import AbstractCustomerActive

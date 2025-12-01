@@ -1,5 +1,6 @@
 # coding: utf-8
 
+# flake8: noqa
 """
 PostFinance Python SDK
 
@@ -23,6 +24,7 @@ limitations under the License.
 """
 
 
+# import models into model package
 from postfinancecheckout.models.abstract_account_update import AbstractAccountUpdate
 from postfinancecheckout.models.abstract_application_user_update import AbstractApplicationUserUpdate
 from postfinancecheckout.models.abstract_customer_active import AbstractCustomerActive

@@ -36,7 +36,7 @@ from postfinancecheckout.rest import RESTResponseType
 
 from postfinancecheckout.utils.encryption_util import EncryptionUtil
 from postfinancecheckout.postfinancecheckout_sdk_exception import PostFinanceCheckoutSdkException
-from postfinancecheckout.error_code import ErrorCode
+from postfinancecheckout.sdk_exception_error_codes import SdkExceptionErrorCodes
 import re
 
 
@@ -305,7 +305,7 @@ class WebhookEncryptionKeysService:
 
             if not public_key_response:
                 raise PostFinanceCheckoutSdkException(
-                    ErrorCode.UNKNOWN_WEBHOOK_ENCRYPTION_PUBLIC_KEY,
+                    SdkExceptionErrorCodes.UNKNOWN_WEBHOOK_ENCRYPTION_PUBLIC_KEY.code,
                     f"Could not find public key with id {public_key_id}"
                 )
 
@@ -313,7 +313,7 @@ class WebhookEncryptionKeysService:
                                                    signature_algorithm)
         else:
             raise PostFinanceCheckoutSdkException(
-                ErrorCode.INVALID_WEBHOOK_ENCRYPTION_HEADER_FORMAT,
+                SdkExceptionErrorCodes.INVALID_WEBHOOK_ENCRYPTION_HEADER_FORMAT.code,
                 "Invalid webhook signature header. Expected format: 'algorithm=<algorithm>, keyId=<keyId>, signature=<signature>'"
             )
 

@@ -30,17 +30,18 @@ import json
 
 from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
 from typing import Any, ClassVar, Dict, List, Optional
+from postfinancecheckout.models.express_checkout_session_state import ExpressCheckoutSessionState
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ExpressCheckoutCreateResponse(BaseModel):
+class ExpressCheckoutApprovalResponse(BaseModel):
     """
-    ExpressCheckoutCreateResponse
+    ExpressCheckoutApprovalResponse
     """ # noqa: E501
-    iframe_src: Optional[StrictStr] = Field(default=None, alias="iframeSrc")
-    session: Optional[StrictInt] = None
-    session_token: Optional[StrictStr] = Field(default=None, alias="sessionToken")
-    __properties: ClassVar[List[str]] = ["iframeSrc", "session", "sessionToken"]
+    merchant_redirect_url: Optional[StrictStr] = Field(default=None, alias="merchantRedirectUrl")
+    session_id: Optional[StrictInt] = Field(default=None, alias="sessionId")
+    state: Optional[ExpressCheckoutSessionState] = None
+    __properties: ClassVar[List[str]] = ["merchantRedirectUrl", "sessionId", "state"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -60,7 +61,7 @@ class ExpressCheckoutCreateResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ExpressCheckoutCreateResponse from a JSON string"""
+        """Create an instance of ExpressCheckoutApprovalResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -72,8 +73,12 @@ class ExpressCheckoutCreateResponse(BaseModel):
         * `None` is only added to the output dict for nullable fields that
           were set at model initialization. Other fields with value `None`
           are ignored.
+        * OpenAPI `readOnly` fields are excluded.
+        * OpenAPI `readOnly` fields are excluded.
         """
         excluded_fields: Set[str] = set([
+            "merchant_redirect_url",
+            "session_id",
         ])
 
         _dict = self.model_dump(
@@ -85,7 +90,7 @@ class ExpressCheckoutCreateResponse(BaseModel):
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ExpressCheckoutCreateResponse from a dict"""
+        """Create an instance of ExpressCheckoutApprovalResponse from a dict"""
         if obj is None:
             return None
 
@@ -93,9 +98,9 @@ class ExpressCheckoutCreateResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "iframeSrc": obj.get("iframeSrc"),
-            "session": obj.get("session"),
-            "sessionToken": obj.get("sessionToken")
+            "merchantRedirectUrl": obj.get("merchantRedirectUrl"),
+            "sessionId": obj.get("sessionId"),
+            "state": obj.get("state")
         })
         return _obj
 

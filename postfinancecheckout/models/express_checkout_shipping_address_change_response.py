@@ -28,19 +28,19 @@ import pprint
 import re  # noqa: F401
 import json
 
-from pydantic import BaseModel, ConfigDict, Field, StrictInt, StrictStr
-from typing import Any, ClassVar, Dict, List, Optional
+from pydantic import BaseModel, ConfigDict, Field, StrictFloat, StrictInt
+from typing import Any, ClassVar, Dict, List, Optional, Union
+from postfinancecheckout.models.express_checkout_shipping_option import ExpressCheckoutShippingOption
 from typing import Optional, Set
 from typing_extensions import Self
 
-class ExpressCheckoutCreateResponse(BaseModel):
+class ExpressCheckoutShippingAddressChangeResponse(BaseModel):
     """
-    ExpressCheckoutCreateResponse
+    ExpressCheckoutShippingAddressChangeResponse
     """ # noqa: E501
-    iframe_src: Optional[StrictStr] = Field(default=None, alias="iframeSrc")
-    session: Optional[StrictInt] = None
-    session_token: Optional[StrictStr] = Field(default=None, alias="sessionToken")
-    __properties: ClassVar[List[str]] = ["iframeSrc", "session", "sessionToken"]
+    order_total: Optional[Union[StrictFloat, StrictInt]] = Field(default=None, alias="orderTotal")
+    shipping_options: Optional[List[ExpressCheckoutShippingOption]] = Field(default=None, alias="shippingOptions")
+    __properties: ClassVar[List[str]] = ["orderTotal", "shippingOptions"]
 
     model_config = ConfigDict(
         populate_by_name=True,
@@ -60,7 +60,7 @@ class ExpressCheckoutCreateResponse(BaseModel):
 
     @classmethod
     def from_json(cls, json_str: str) -> Optional[Self]:
-        """Create an instance of ExpressCheckoutCreateResponse from a JSON string"""
+        """Create an instance of ExpressCheckoutShippingAddressChangeResponse from a JSON string"""
         return cls.from_dict(json.loads(json_str))
 
     def to_dict(self) -> Dict[str, Any]:
@@ -72,8 +72,12 @@ class ExpressCheckoutCreateResponse(BaseModel):
         * `None` is only added to the output dict for nullable fields that
           were set at model initialization. Other fields with value `None`
           are ignored.
+        * OpenAPI `readOnly` fields are excluded.
+        * OpenAPI `readOnly` fields are excluded.
         """
         excluded_fields: Set[str] = set([
+            "order_total",
+            "shipping_options",
         ])
 
         _dict = self.model_dump(
@@ -81,11 +85,18 @@ class ExpressCheckoutCreateResponse(BaseModel):
             exclude=excluded_fields,
             exclude_none=True,
         )
+        # override the default output from pydantic by calling `to_dict()` of each item in shipping_options (list)
+        _items = []
+        if self.shipping_options:
+            for _item_shipping_options in self.shipping_options:
+                if _item_shipping_options:
+                    _items.append(_item_shipping_options.to_dict())
+            _dict['shippingOptions'] = _items
         return _dict
 
     @classmethod
     def from_dict(cls, obj: Optional[Dict[str, Any]]) -> Optional[Self]:
-        """Create an instance of ExpressCheckoutCreateResponse from a dict"""
+        """Create an instance of ExpressCheckoutShippingAddressChangeResponse from a dict"""
         if obj is None:
             return None
 
@@ -93,9 +104,8 @@ class ExpressCheckoutCreateResponse(BaseModel):
             return cls.model_validate(obj)
 
         _obj = cls.model_validate({
-            "iframeSrc": obj.get("iframeSrc"),
-            "session": obj.get("session"),
-            "sessionToken": obj.get("sessionToken")
+            "orderTotal": obj.get("orderTotal"),
+            "shippingOptions": [ExpressCheckoutShippingOption.from_dict(_item) for _item in obj["shippingOptions"]] if obj.get("shippingOptions") is not None else None
         })
         return _obj
 

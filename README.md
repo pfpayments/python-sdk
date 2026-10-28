@@ -203,36 +203,6 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /application-users/{userId}/keys
   &nbsp;&nbsp;&nbsp;&nbsp;Generate a new authentication key
   <br><br>
-- <strong>ApplicationUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>delete_application_users_user_id_account_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>DELETE</strong> /application-users/{userId}/account-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;Unassign a role from an application user for an account
-  <br><br>
-- <strong>ApplicationUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>delete_application_users_user_id_space_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>DELETE</strong> /application-users/{userId}/space-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;Unassign a role from an application user for a space
-  <br><br>
-- <strong>ApplicationUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>get_application_users_user_id_account_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /application-users/{userId}/account-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;List all roles of an application user for an account
-  <br><br>
-- <strong>ApplicationUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>get_application_users_user_id_space_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /application-users/{userId}/space-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;List all roles of an application user for a space
-  <br><br>
-- <strong>ApplicationUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>post_application_users_user_id_account_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /application-users/{userId}/account-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;Assign a role to an application user for an account
-  <br><br>
-- <strong>ApplicationUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>post_application_users_user_id_space_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /application-users/{userId}/space-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;Assign a role to an application user for a space
-  <br><br>
 - <strong>BankAccountsService</strong><br>
   &nbsp;&nbsp;* <code>get_payment_bank_accounts</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/bank-accounts
@@ -263,10 +233,15 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/bank-transactions/search
   &nbsp;&nbsp;&nbsp;&nbsp;Search bank transactions
   <br><br>
-- <strong>BogusExpressCheckoutService</strong><br>
-  &nbsp;&nbsp;* <code>post_bogus_express_checkout_on_approve</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /bogus-express-checkout/on-approve
-  &nbsp;&nbsp;&nbsp;&nbsp;Approve express checkout wallet payment
+- <strong>BoardingSubscriptionStrategyService</strong><br>
+  &nbsp;&nbsp;* <code>post_boarding_subscription_strategy_information</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /boarding/subscription-strategy/information
+  &nbsp;&nbsp;&nbsp;&nbsp;Create a boarding subscription information for an account
+  <br><br>
+- <strong>BoardingSubscriptionStrategyService</strong><br>
+  &nbsp;&nbsp;* <code>post_boarding_subscription_strategy_plans</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /boarding/subscription-strategy/plans
+  &nbsp;&nbsp;&nbsp;&nbsp;Create new Boarding Trial Subscription to Account
   <br><br>
 - <strong>ChargeAttemptsService</strong><br>
   &nbsp;&nbsp;* <code>get_payment_charge_attempts</code>
@@ -608,6 +583,21 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /document-templates/search
   &nbsp;&nbsp;&nbsp;&nbsp;Search document templates
   <br><br>
+- <strong>DunningCaseLevelsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_dunning_cases_levels</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/dunning-cases/levels
+  &nbsp;&nbsp;&nbsp;&nbsp;List all dunning case levels
+  <br><br>
+- <strong>DunningCaseLevelsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_dunning_cases_levels_id</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/dunning-cases/levels/{id}
+  &nbsp;&nbsp;&nbsp;&nbsp;Retrieve a dunning case level
+  <br><br>
+- <strong>DunningCaseLevelsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_dunning_cases_levels_search</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/dunning-cases/levels/search
+  &nbsp;&nbsp;&nbsp;&nbsp;Search dunning case levels
+  <br><br>
 - <strong>DunningCasesService</strong><br>
   &nbsp;&nbsp;* <code>get_payment_dunning_cases</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/dunning-cases
@@ -663,21 +653,6 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/dunning-flows/search
   &nbsp;&nbsp;&nbsp;&nbsp;Search dunning flows
   <br><br>
-- <strong>ExpressCheckoutService</strong><br>
-  &nbsp;&nbsp;* <code>patch_express_checkout_shipping_address_change</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>PATCH</strong> /express-checkout/shipping/address-change
-  &nbsp;&nbsp;&nbsp;&nbsp;Change shipping address
-  <br><br>
-- <strong>ExpressCheckoutService</strong><br>
-  &nbsp;&nbsp;* <code>patch_express_checkout_shipping_method_change</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>PATCH</strong> /express-checkout/shipping/method-change
-  &nbsp;&nbsp;&nbsp;&nbsp;Change shipping method
-  <br><br>
-- <strong>ExpressCheckoutService</strong><br>
-  &nbsp;&nbsp;* <code>post_express_checkout_create_session</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /express-checkout/create-session
-  &nbsp;&nbsp;&nbsp;&nbsp;Create a new Express Checkout Session
-  <br><br>
 - <strong>ExternalTransferBankTransactionsService</strong><br>
   &nbsp;&nbsp;* <code>get_payment_bank_transactions_external_transfers</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/bank-transactions/external-transfers
@@ -692,6 +667,26 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;* <code>get_payment_bank_transactions_external_transfers_search</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/bank-transactions/external-transfers/search
   &nbsp;&nbsp;&nbsp;&nbsp;Search external transfer bank transactions
+  <br><br>
+- <strong>FulfillmentsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_facilitator_fulfillments_search</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/facilitator/fulfillments/search
+  &nbsp;&nbsp;&nbsp;&nbsp;Search fulfillments
+  <br><br>
+- <strong>FulfillmentsService</strong><br>
+  &nbsp;&nbsp;* <code>patch_payment_facilitator_fulfillments_id_tracking_number</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>PATCH</strong> /payment/facilitator/fulfillments/{id}/tracking-number
+  &nbsp;&nbsp;&nbsp;&nbsp;Update tracking number
+  <br><br>
+- <strong>FulfillmentsService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_facilitator_fulfillments</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/facilitator/fulfillments
+  &nbsp;&nbsp;&nbsp;&nbsp;Create a fulfillment
+  <br><br>
+- <strong>FulfillmentsService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_facilitator_fulfillments_id_confirm_in_store_pickup</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/facilitator/fulfillments/{id}/confirm-in-store-pickup
+  &nbsp;&nbsp;&nbsp;&nbsp;Confirm in-store pickup
   <br><br>
 - <strong>HumanUsersService</strong><br>
   &nbsp;&nbsp;* <code>delete_human_users_id</code>
@@ -728,36 +723,6 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /human-users
   &nbsp;&nbsp;&nbsp;&nbsp;Create a human user
   <br><br>
-- <strong>HumanUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>delete_human_users_user_id_account_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>DELETE</strong> /human-users/{userId}/account-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;Unassign a role from a human user for an account
-  <br><br>
-- <strong>HumanUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>delete_human_users_user_id_space_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>DELETE</strong> /human-users/{userId}/space-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;Unassign a role from a human user for a space
-  <br><br>
-- <strong>HumanUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>get_human_users_user_id_account_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /human-users/{userId}/account-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;List all roles of a human user for an account
-  <br><br>
-- <strong>HumanUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>get_human_users_user_id_space_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /human-users/{userId}/space-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;List all roles of a human user for a space
-  <br><br>
-- <strong>HumanUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>post_human_users_user_id_account_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /human-users/{userId}/account-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;Assign a role to a human user for an account
-  <br><br>
-- <strong>HumanUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>post_human_users_user_id_space_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /human-users/{userId}/space-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;Assign a role to a human user for a space
-  <br><br>
 - <strong>InternalTransferBankTransactionsService</strong><br>
   &nbsp;&nbsp;* <code>get_payment_bank_transactions_internal_transfers</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/bank-transactions/internal-transfers
@@ -772,6 +737,136 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;* <code>get_payment_bank_transactions_internal_transfers_search</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/bank-transactions/internal-transfers/search
   &nbsp;&nbsp;&nbsp;&nbsp;Search internal transfer bank transactions
+  <br><br>
+- <strong>InvoiceReconciliationRecordInvoiceLinksService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_invoice_reconciliation_record_invoice_links</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/invoice-reconciliation-record-invoice-links
+  &nbsp;&nbsp;&nbsp;&nbsp;List all invoice reconciliation record invoice links
+  <br><br>
+- <strong>InvoiceReconciliationRecordInvoiceLinksService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_invoice_reconciliation_record_invoice_links_id</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/invoice-reconciliation-record-invoice-links/{id}
+  &nbsp;&nbsp;&nbsp;&nbsp;Retrieve an invoice reconciliation record invoice link
+  <br><br>
+- <strong>InvoiceReconciliationRecordInvoiceLinksService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_invoice_reconciliation_record_invoice_links_search</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/invoice-reconciliation-record-invoice-links/search
+  &nbsp;&nbsp;&nbsp;&nbsp;Search invoice reconciliation record invoice links
+  <br><br>
+- <strong>InvoiceReconciliationRecordInvoiceLinksService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_invoice_reconciliation_record_invoice_links</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/invoice-reconciliation-record-invoice-links
+  &nbsp;&nbsp;&nbsp;&nbsp;Link an invoice
+  <br><br>
+- <strong>InvoiceReconciliationRecordInvoiceLinksService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_invoice_reconciliation_record_invoice_links_unlink</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/invoice-reconciliation-record-invoice-links/unlink
+  &nbsp;&nbsp;&nbsp;&nbsp;Unlink an invoice
+  <br><br>
+- <strong>InvoiceReconciliationRecordsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_invoice_reconciliation_records</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/invoice-reconciliation-records
+  &nbsp;&nbsp;&nbsp;&nbsp;List all invoice reconciliation records
+  <br><br>
+- <strong>InvoiceReconciliationRecordsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_invoice_reconciliation_records_id</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/invoice-reconciliation-records/{id}
+  &nbsp;&nbsp;&nbsp;&nbsp;Retrieve an invoice reconciliation record
+  <br><br>
+- <strong>InvoiceReconciliationRecordsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_invoice_reconciliation_records_search</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/invoice-reconciliation-records/search
+  &nbsp;&nbsp;&nbsp;&nbsp;Search invoice reconciliation records
+  <br><br>
+- <strong>InvoiceReconciliationRecordsService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_invoice_reconciliation_records_id_discard</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/invoice-reconciliation-records/{id}/discard
+  &nbsp;&nbsp;&nbsp;&nbsp;Discard an invoice reconciliation record
+  <br><br>
+- <strong>InvoiceReconciliationRecordsService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_invoice_reconciliation_records_id_resolve</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/invoice-reconciliation-records/{id}/resolve
+  &nbsp;&nbsp;&nbsp;&nbsp;Resolve an invoice reconciliation record
+  <br><br>
+- <strong>InvoiceReimbursementsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_invoice_reimbursements</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/invoice-reimbursements
+  &nbsp;&nbsp;&nbsp;&nbsp;List all invoice reimbursements
+  <br><br>
+- <strong>InvoiceReimbursementsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_invoice_reimbursements_id</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/invoice-reimbursements/{id}
+  &nbsp;&nbsp;&nbsp;&nbsp;Retrieve an invoice reimbursement
+  <br><br>
+- <strong>InvoiceReimbursementsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_invoice_reimbursements_search</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/invoice-reimbursements/search
+  &nbsp;&nbsp;&nbsp;&nbsp;Search invoice reimbursements
+  <br><br>
+- <strong>InvoiceReimbursementsService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_invoice_reimbursements_id_connector</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/invoice-reimbursements/{id}/connector
+  &nbsp;&nbsp;&nbsp;&nbsp;Update payment connector configuration
+  <br><br>
+- <strong>InvoiceReimbursementsService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_invoice_reimbursements_id_iban</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/invoice-reimbursements/{id}/iban
+  &nbsp;&nbsp;&nbsp;&nbsp;Update IBAN
+  <br><br>
+- <strong>JoinAdminPartnerConfigurationService</strong><br>
+  &nbsp;&nbsp;* <code>delete_scope_join_program_partners_configurations_id</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>DELETE</strong> /scope/join-program/partners/configurations/{id}
+  &nbsp;&nbsp;&nbsp;&nbsp;Delete a join admin partner configuration
+  <br><br>
+- <strong>JoinAdminPartnerConfigurationService</strong><br>
+  &nbsp;&nbsp;* <code>get_scope_join_program_partners_configurations_id</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /scope/join-program/partners/configurations/{id}
+  &nbsp;&nbsp;&nbsp;&nbsp;Retrieve a join admin partner configuration
+  <br><br>
+- <strong>JoinAdminPartnerConfigurationService</strong><br>
+  &nbsp;&nbsp;* <code>patch_scope_join_program_partners_configurations_partner_account_id</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>PATCH</strong> /scope/join-program/partners/configurations/{partnerAccountId}
+  &nbsp;&nbsp;&nbsp;&nbsp;Update a join admin partner configuration
+  <br><br>
+- <strong>JoinAdminPartnerConfigurationService</strong><br>
+  &nbsp;&nbsp;* <code>post_scope_join_program_partners_configurations</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /scope/join-program/partners/configurations
+  &nbsp;&nbsp;&nbsp;&nbsp;Create a join admin partner configuration
+  <br><br>
+- <strong>JoinPartnershipService</strong><br>
+  &nbsp;&nbsp;* <code>delete_join_program_partnerships_id</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>DELETE</strong> /join-program/partnerships/{id}
+  &nbsp;&nbsp;&nbsp;&nbsp;Delete a join partnership
+  <br><br>
+- <strong>JoinPartnershipService</strong><br>
+  &nbsp;&nbsp;* <code>get_join_program_partnerships</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /join-program/partnerships
+  &nbsp;&nbsp;&nbsp;&nbsp;List all join partnerships
+  <br><br>
+- <strong>JoinPartnershipService</strong><br>
+  &nbsp;&nbsp;* <code>get_join_program_partnerships_id</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /join-program/partnerships/{id}
+  &nbsp;&nbsp;&nbsp;&nbsp;Retrieve a join partnership
+  <br><br>
+- <strong>JoinPartnershipService</strong><br>
+  &nbsp;&nbsp;* <code>get_join_program_partnerships_search</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /join-program/partnerships/search
+  &nbsp;&nbsp;&nbsp;&nbsp;Search join partnerships
+  <br><br>
+- <strong>JoinPartnershipService</strong><br>
+  &nbsp;&nbsp;* <code>post_join_program_partnerships_create_affiliate</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /join-program/partnerships/create-affiliate
+  &nbsp;&nbsp;&nbsp;&nbsp;Create a join account partnership
+  <br><br>
+- <strong>JoinPartnershipService</strong><br>
+  &nbsp;&nbsp;* <code>post_join_program_partnerships_create_isv</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /join-program/partnerships/create-isv
+  &nbsp;&nbsp;&nbsp;&nbsp;Create a join platform partnership
+  <br><br>
+- <strong>JoinPartnershipService</strong><br>
+  &nbsp;&nbsp;* <code>post_join_program_partnerships_create_simple</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /join-program/partnerships/create-simple
+  &nbsp;&nbsp;&nbsp;&nbsp;Create a join partnership for an existing merchant
   <br><br>
 - <strong>LabelDescriptorsService</strong><br>
   &nbsp;&nbsp;* <code>get_label_descriptors</code>
@@ -857,6 +952,41 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;* <code>post_manual_tasks_id_action_action_id</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /manual-tasks/{id}/action/{actionId}
   &nbsp;&nbsp;&nbsp;&nbsp;Process a manual task&#39;s action
+  <br><br>
+- <strong>MembersService</strong><br>
+  &nbsp;&nbsp;* <code>get_members_account</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /members/account
+  &nbsp;&nbsp;&nbsp;&nbsp;List all members of the account
+  <br><br>
+- <strong>MembersService</strong><br>
+  &nbsp;&nbsp;* <code>get_members_scope</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /members/scope
+  &nbsp;&nbsp;&nbsp;&nbsp;List all members of the scope
+  <br><br>
+- <strong>MembersService</strong><br>
+  &nbsp;&nbsp;* <code>get_members_space</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /members/space
+  &nbsp;&nbsp;&nbsp;&nbsp;List all members of the space
+  <br><br>
+- <strong>MerchantApplicationsService</strong><br>
+  &nbsp;&nbsp;* <code>get_onboarding_merchant_applications_id_status</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /onboarding/merchant-applications/{id}/status
+  &nbsp;&nbsp;&nbsp;&nbsp;Retrieve a merchant application status
+  <br><br>
+- <strong>MerchantApplicationsService</strong><br>
+  &nbsp;&nbsp;* <code>get_onboarding_merchant_applications_id_submission_url</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /onboarding/merchant-applications/{id}/submission-url
+  &nbsp;&nbsp;&nbsp;&nbsp;Return merchant application submission URL
+  <br><br>
+- <strong>MerchantApplicationsService</strong><br>
+  &nbsp;&nbsp;* <code>patch_onboarding_merchant_applications_id</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>PATCH</strong> /onboarding/merchant-applications/{id}
+  &nbsp;&nbsp;&nbsp;&nbsp;Update a merchant application
+  <br><br>
+- <strong>MerchantApplicationsService</strong><br>
+  &nbsp;&nbsp;* <code>post_onboarding_merchant_applications</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /onboarding/merchant-applications
+  &nbsp;&nbsp;&nbsp;&nbsp;Create a merchant application
   <br><br>
 - <strong>PaymentConnectorConfigurationsService</strong><br>
   &nbsp;&nbsp;* <code>delete_payment_connector_configurations_id</code>
@@ -1023,6 +1153,11 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/processor-configurations
   &nbsp;&nbsp;&nbsp;&nbsp;Create a payment processor configuration
   <br><br>
+- <strong>PaymentProcessorConfigurationsService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_processor_configurations_id_link_contract</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/processor-configurations/{id}/link-contract
+  &nbsp;&nbsp;&nbsp;&nbsp;Link a contract with a payment processor configuration
+  <br><br>
 - <strong>PaymentProcessorsService</strong><br>
   &nbsp;&nbsp;* <code>get_payment_processors</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/processors
@@ -1084,6 +1219,11 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;List all payment terminals
   <br><br>
 - <strong>PaymentTerminalsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_terminals_activation_status</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/terminals/activation-status
+  &nbsp;&nbsp;&nbsp;&nbsp;Search payment terminal activation status
+  <br><br>
+- <strong>PaymentTerminalsService</strong><br>
   &nbsp;&nbsp;* <code>get_payment_terminals_id</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/terminals/{id}
   &nbsp;&nbsp;&nbsp;&nbsp;Retrieve a payment terminal
@@ -1114,6 +1254,16 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;Perform a payment terminal transaction by identifier
   <br><br>
 - <strong>PaymentTerminalsService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_terminals_by_identifier_identifier_refresh</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/terminals/by-identifier/{identifier}/refresh
+  &nbsp;&nbsp;&nbsp;&nbsp;Refresh a physical terminal state by identifier
+  <br><br>
+- <strong>PaymentTerminalsService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_terminals_by_identifier_identifier_trigger_configuration</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/terminals/by-identifier/{identifier}/trigger-configuration
+  &nbsp;&nbsp;&nbsp;&nbsp;Remotely trigger the configuration by identifier
+  <br><br>
+- <strong>PaymentTerminalsService</strong><br>
   &nbsp;&nbsp;* <code>post_payment_terminals_by_identifier_identifier_trigger_final_balance</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/terminals/by-identifier/{identifier}/trigger-final-balance
   &nbsp;&nbsp;&nbsp;&nbsp;Remotely trigger the final balance by identifier
@@ -1129,6 +1279,16 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;Perform a payment terminal transaction
   <br><br>
 - <strong>PaymentTerminalsService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_terminals_id_refresh</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/terminals/{id}/refresh
+  &nbsp;&nbsp;&nbsp;&nbsp;Refresh a physical terminal state
+  <br><br>
+- <strong>PaymentTerminalsService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_terminals_id_trigger_configuration</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/terminals/{id}/trigger-configuration
+  &nbsp;&nbsp;&nbsp;&nbsp;Remotely trigger the configuration
+  <br><br>
+- <strong>PaymentTerminalsService</strong><br>
   &nbsp;&nbsp;* <code>post_payment_terminals_id_trigger_final_balance</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/terminals/{id}/trigger-final-balance
   &nbsp;&nbsp;&nbsp;&nbsp;Remotely trigger the final balance
@@ -1137,6 +1297,11 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;* <code>post_payment_terminals_id_unlink</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/terminals/{id}/unlink
   &nbsp;&nbsp;&nbsp;&nbsp;Unlink any device from a payment terminal
+  <br><br>
+- <strong>PaymentTerminalsService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_terminals_trigger_reversal</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/terminals/trigger-reversal
+  &nbsp;&nbsp;&nbsp;&nbsp;Revert terminal transaction
   <br><br>
 - <strong>PermissionsService</strong><br>
   &nbsp;&nbsp;* <code>get_permissions</code>
@@ -1317,36 +1482,6 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;* <code>post_single_sign_on_users</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /single-sign-on-users
   &nbsp;&nbsp;&nbsp;&nbsp;Create a single sign-on user
-  <br><br>
-- <strong>SingleSignOnUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>delete_single_sign_on_users_user_id_account_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>DELETE</strong> /single-sign-on-users/{userId}/account-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;Unassign a role from a single sign-on user for an account
-  <br><br>
-- <strong>SingleSignOnUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>delete_single_sign_on_users_user_id_space_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>DELETE</strong> /single-sign-on-users/{userId}/space-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;Unassign a role from a single sign-on user for a space
-  <br><br>
-- <strong>SingleSignOnUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>get_single_sign_on_users_user_id_account_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /single-sign-on-users/{userId}/account-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;List all roles of a single sign-on user for an account
-  <br><br>
-- <strong>SingleSignOnUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>get_single_sign_on_users_user_id_space_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /single-sign-on-users/{userId}/space-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;List all roles of a single sign-on user for a space
-  <br><br>
-- <strong>SingleSignOnUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>post_single_sign_on_users_user_id_account_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /single-sign-on-users/{userId}/account-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;Assign a role to a single sign-on user for an account
-  <br><br>
-- <strong>SingleSignOnUsersRolesService</strong><br>
-  &nbsp;&nbsp;* <code>post_single_sign_on_users_user_id_space_roles</code>
-  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /single-sign-on-users/{userId}/space-roles
-  &nbsp;&nbsp;&nbsp;&nbsp;Assign a role to a single sign-on user for a space
   <br><br>
 - <strong>SpacesService</strong><br>
   &nbsp;&nbsp;* <code>delete_spaces_id</code>
@@ -1938,6 +2073,21 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /subscriptions/{id}/upgrade-product
   &nbsp;&nbsp;&nbsp;&nbsp;Upgrade a subscription&#39;s product
   <br><br>
+- <strong>TerminalLocationsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_point_of_sale_locations</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/point-of-sale/locations
+  &nbsp;&nbsp;&nbsp;&nbsp;List terminal locations
+  <br><br>
+- <strong>TerminalLocationsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_point_of_sale_locations_id</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/point-of-sale/locations/{id}
+  &nbsp;&nbsp;&nbsp;&nbsp;Retrieve a terminal location
+  <br><br>
+- <strong>TerminalLocationsService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_point_of_sale_locations</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/point-of-sale/locations
+  &nbsp;&nbsp;&nbsp;&nbsp;Create a terminal location
+  <br><br>
 - <strong>TokenVersionsService</strong><br>
   &nbsp;&nbsp;* <code>get_payment_token_versions</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/token-versions
@@ -2134,6 +2284,11 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;Derecognize a transaction invoice
   <br><br>
 - <strong>TransactionInvoicesService</strong><br>
+  &nbsp;&nbsp;* <code>post_payment_transactions_invoices_id_instant_payment_url</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/transactions/invoices/{id}/instant-payment-url
+  &nbsp;&nbsp;&nbsp;&nbsp;Create an instant invoice payment URL
+  <br><br>
+- <strong>TransactionInvoicesService</strong><br>
   &nbsp;&nbsp;* <code>post_payment_transactions_invoices_id_mark_paid</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /payment/transactions/invoices/{id}/mark-paid
   &nbsp;&nbsp;&nbsp;&nbsp;Mark a transaction invoice as paid
@@ -2254,6 +2409,11 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;&nbsp;&nbsp;Retrieve a Lightbox JavaScript URL
   <br><br>
 - <strong>TransactionsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_transactions_id_overview</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/transactions/{id}/overview
+  &nbsp;&nbsp;&nbsp;&nbsp;Retrieve a transaction overview
+  <br><br>
+- <strong>TransactionsService</strong><br>
   &nbsp;&nbsp;* <code>get_payment_transactions_id_packing_slip_document</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/transactions/{id}/packing-slip-document
   &nbsp;&nbsp;&nbsp;&nbsp;Retrieve a packing slip document
@@ -2267,6 +2427,11 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;* <code>get_payment_transactions_id_payment_page_url</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/transactions/{id}/payment-page-url
   &nbsp;&nbsp;&nbsp;&nbsp;Retrieve a payment page URL
+  <br><br>
+- <strong>TransactionsService</strong><br>
+  &nbsp;&nbsp;* <code>get_payment_transactions_id_successful_charge_attempt</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>GET</strong> /payment/transactions/{id}/successful-charge-attempt
+  &nbsp;&nbsp;&nbsp;&nbsp;Retrieve the successful charge attempt
   <br><br>
 - <strong>TransactionsService</strong><br>
   &nbsp;&nbsp;* <code>get_payment_transactions_id_terminal_receipts</code>
@@ -2377,6 +2542,21 @@ Web Api client: [*link*](https://checkout.postfinance.ch//api/client)<br>
   &nbsp;&nbsp;* <code>post_web_apps_uninstall</code>
   &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /web-apps/uninstall
   &nbsp;&nbsp;&nbsp;&nbsp;Uninstall a web app
+  <br><br>
+- <strong>WebUiAccountThemeService</strong><br>
+  &nbsp;&nbsp;* <code>delete_account_ui_themes_account_id</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>DELETE</strong> /account/ui-themes/{accountId}
+  &nbsp;&nbsp;&nbsp;&nbsp;Delete account UI theme
+  <br><br>
+- <strong>WebUiAccountThemeService</strong><br>
+  &nbsp;&nbsp;* <code>delete_account_ui_themes_account_id_logo</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>DELETE</strong> /account/ui-themes/{accountId}/logo
+  &nbsp;&nbsp;&nbsp;&nbsp;Delete account theme logo
+  <br><br>
+- <strong>WebUiAccountThemeService</strong><br>
+  &nbsp;&nbsp;* <code>post_account_ui_themes_create</code>
+  &nbsp;&nbsp;&nbsp;&nbsp;<strong>POST</strong> /account/ui-themes/create
+  &nbsp;&nbsp;&nbsp;&nbsp;Create account UI theme
   <br><br>
 - <strong>WebhookEncryptionKeysService</strong><br>
   &nbsp;&nbsp;* <code>get_webhooks_encryption_keys_id</code>
@@ -2493,7 +2673,6 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>AbstractPaymentLinkUpdate</strong>
 * <strong>AbstractPaymentMethodConfigurationUpdate</strong>
 * <strong>AbstractPaymentProcessorConfigurationActive</strong>
-* <strong>AbstractPaymentTerminalUpdate</strong>
 * <strong>AbstractRefundCommentActive</strong>
 * <strong>AbstractRoleUpdate</strong>
 * <strong>AbstractSingleSignOnUserUpdate</strong>
@@ -2506,10 +2685,12 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>AbstractTransactionCommentActive</strong>
 * <strong>AbstractTransactionInvoiceCommentActive</strong>
 * <strong>AbstractTransactionPending</strong>
+* <strong>AbstractWalleejoinPartnership</strong>
 * <strong>AbstractWebhookListenerUpdate</strong>
 * <strong>AbstractWebhookUrlUpdate</strong>
 * <strong>Account</strong>
 * <strong>AccountCreate</strong>
+* <strong>AccountCreateWithOwner</strong>
 * <strong>AccountListResponse</strong>
 * <strong>AccountSearchResponse</strong>
 * <strong>AccountState</strong>
@@ -2535,6 +2716,7 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>BankAccountSearchResponse</strong>
 * <strong>BankAccountState</strong>
 * <strong>BankAccountType</strong>
+* <strong>BankPaymentType</strong>
 * <strong>BankTransaction</strong>
 * <strong>BankTransactionFlowDirection</strong>
 * <strong>BankTransactionListResponse</strong>
@@ -2542,11 +2724,11 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>BankTransactionSource</strong>
 * <strong>BankTransactionState</strong>
 * <strong>BankTransactionType</strong>
+* <strong>BasicAddress</strong>
 * <strong>BillingCycleModel</strong>
 * <strong>BillingCycleType</strong>
 * <strong>BillingDayCustomization</strong>
-* <strong>BogusExpressCheckoutApprovalRequest</strong>
-* <strong>BogusExpressCheckoutPaymentData</strong>
+* <strong>BoardingStrategyInformationRequest</strong>
 * <strong>CardAuthenticationResponse</strong>
 * <strong>CardAuthenticationVersion</strong>
 * <strong>CardCryptogram</strong>
@@ -2557,6 +2739,8 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>ChargeAttempt</strong>
 * <strong>ChargeAttemptEnvironment</strong>
 * <strong>ChargeAttemptListResponse</strong>
+* <strong>ChargeAttemptLookupResult</strong>
+* <strong>ChargeAttemptProjection</strong>
 * <strong>ChargeAttemptSearchResponse</strong>
 * <strong>ChargeAttemptState</strong>
 * <strong>ChargeBankTransaction</strong>
@@ -2590,6 +2774,7 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>ConnectorInvocationStage</strong>
 * <strong>CountryListResponse</strong>
 * <strong>CountrySearchResponse</strong>
+* <strong>CreateFulfillmentRequest</strong>
 * <strong>CreationEntityState</strong>
 * <strong>CurrencyBankAccount</strong>
 * <strong>CurrencyBankAccountListResponse</strong>
@@ -2617,6 +2802,8 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>CustomerSearchResponse</strong>
 * <strong>CustomersPresence</strong>
 * <strong>DataCollectionType</strong>
+* <strong>DeliveryDaysRange</strong>
+* <strong>DeliveryDestination</strong>
 * <strong>DeliveryIndication</strong>
 * <strong>DeliveryIndicationDecisionReason</strong>
 * <strong>DeliveryIndicationListResponse</strong>
@@ -2632,6 +2819,10 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>DocumentTemplateTypeListResponse</strong>
 * <strong>DocumentTemplateTypeSearchResponse</strong>
 * <strong>DunningCase</strong>
+* <strong>DunningCaseLevel</strong>
+* <strong>DunningCaseLevelListResponse</strong>
+* <strong>DunningCaseLevelSearchResponse</strong>
+* <strong>DunningCaseLevelState</strong>
 * <strong>DunningCaseListResponse</strong>
 * <strong>DunningCaseSearchResponse</strong>
 * <strong>DunningCaseState</strong>
@@ -2646,17 +2837,6 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>DunningFlowSearchResponse</strong>
 * <strong>DunningFlowType</strong>
 * <strong>Environment</strong>
-* <strong>ExpressCheckoutApprovalResponse</strong>
-* <strong>ExpressCheckoutCreateResponse</strong>
-* <strong>ExpressCheckoutSession</strong>
-* <strong>ExpressCheckoutSessionCreate</strong>
-* <strong>ExpressCheckoutSessionState</strong>
-* <strong>ExpressCheckoutShippingAddressChangeRequest</strong>
-* <strong>ExpressCheckoutShippingAddressChangeResponse</strong>
-* <strong>ExpressCheckoutShippingMethodChangeRequest</strong>
-* <strong>ExpressCheckoutShippingMethodChangeResponse</strong>
-* <strong>ExpressCheckoutShippingOption</strong>
-* <strong>ExpressCheckoutWalletType</strong>
 * <strong>ExternalTransferBankTransaction</strong>
 * <strong>ExternalTransferBankTransactionListResponse</strong>
 * <strong>ExternalTransferBankTransactionSearchResponse</strong>
@@ -2665,18 +2845,36 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>FailureReason</strong>
 * <strong>Feature</strong>
 * <strong>FeatureCategory</strong>
+* <strong>Fulfillment</strong>
+* <strong>FulfillmentSearchResponse</strong>
+* <strong>FulfillmentState</strong>
 * <strong>Gender</strong>
 * <strong>HumanUser</strong>
 * <strong>HumanUserCreate</strong>
 * <strong>HumanUserListResponse</strong>
 * <strong>HumanUserSearchResponse</strong>
 * <strong>HumanUserUpdate</strong>
+* <strong>IdentityInfo</strong>
 * <strong>InternalTransferBankTransaction</strong>
 * <strong>InternalTransferBankTransactionListResponse</strong>
 * <strong>InternalTransferBankTransactionSearchResponse</strong>
 * <strong>InvoiceCommentListResponse</strong>
 * <strong>InvoiceCommentSearchResponse</strong>
 * <strong>InvoiceListResponse</strong>
+* <strong>InvoiceProcessor</strong>
+* <strong>InvoiceReconciliationRecord</strong>
+* <strong>InvoiceReconciliationRecordInvoiceLink</strong>
+* <strong>InvoiceReconciliationRecordInvoiceLinkListResponse</strong>
+* <strong>InvoiceReconciliationRecordInvoiceLinkSearchResponse</strong>
+* <strong>InvoiceReconciliationRecordListResponse</strong>
+* <strong>InvoiceReconciliationRecordRejectionStatus</strong>
+* <strong>InvoiceReconciliationRecordSearchResponse</strong>
+* <strong>InvoiceReconciliationRecordState</strong>
+* <strong>InvoiceReconciliationRecordType</strong>
+* <strong>InvoiceReimbursement</strong>
+* <strong>InvoiceReimbursementListResponse</strong>
+* <strong>InvoiceReimbursementSearchResponse</strong>
+* <strong>InvoiceReimbursementState</strong>
 * <strong>InvoiceSearchResponse</strong>
 * <strong>Label</strong>
 * <strong>LabelDescriptor</strong>
@@ -2689,6 +2887,7 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>LabelDescriptorType</strong>
 * <strong>LanguageListResponse</strong>
 * <strong>LanguageSearchResponse</strong>
+* <strong>LegalForm</strong>
 * <strong>LegalOrganizationForm</strong>
 * <strong>LegalOrganizationFormListResponse</strong>
 * <strong>LegalOrganizationFormSearchResponse</strong>
@@ -2709,6 +2908,15 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>ManualTaskSearchResponse</strong>
 * <strong>ManualTaskState</strong>
 * <strong>ManualTaskType</strong>
+* <strong>MerchantApplicationDataDto</strong>
+* <strong>MerchantApplicationState</strong>
+* <strong>MerchantApplicationStatusDto</strong>
+* <strong>MerchantBankDetailsDto</strong>
+* <strong>MerchantCompanyDetailsDto</strong>
+* <strong>MerchantContractRevenueDto</strong>
+* <strong>MerchantEcommerceDetailsDto</strong>
+* <strong>MerchantPaymentChannelsDto</strong>
+* <strong>MerchantRelatedPersonsDto</strong>
 * <strong>MetricListResponse</strong>
 * <strong>MetricSearchResponse</strong>
 * <strong>MetricUsageReportListResponse</strong>
@@ -2729,8 +2937,12 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>PaymentContract</strong>
 * <strong>PaymentContractState</strong>
 * <strong>PaymentContractType</strong>
+* <strong>PaymentFacilitatorPricingProfileDto</strong>
+* <strong>PaymentFacilitatorPricingProfileState</strong>
 * <strong>PaymentInformationHash</strong>
 * <strong>PaymentInformationHashType</strong>
+* <strong>PaymentInitiationAdviceFile</strong>
+* <strong>PaymentInitiationAdviceFileState</strong>
 * <strong>PaymentLink</strong>
 * <strong>PaymentLinkActive</strong>
 * <strong>PaymentLinkAddressHandlingMode</strong>
@@ -2761,18 +2973,23 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>PaymentProcessorListResponse</strong>
 * <strong>PaymentProcessorSearchResponse</strong>
 * <strong>PaymentTerminal</strong>
+* <strong>PaymentTerminalActivationStatus</strong>
+* <strong>PaymentTerminalActivationStatusDetailSearchResponse</strong>
 * <strong>PaymentTerminalAddress</strong>
+* <strong>PaymentTerminalAddressCreate</strong>
 * <strong>PaymentTerminalConfiguration</strong>
 * <strong>PaymentTerminalConfigurationState</strong>
 * <strong>PaymentTerminalConfigurationVersion</strong>
 * <strong>PaymentTerminalConfigurationVersionState</strong>
-* <strong>PaymentTerminalCreate</strong>
+* <strong>PaymentTerminalCreationRequest</strong>
 * <strong>PaymentTerminalDccTransactionSum</strong>
 * <strong>PaymentTerminalLocation</strong>
+* <strong>PaymentTerminalLocationCrudModel</strong>
+* <strong>PaymentTerminalLocationCrudModelRestApiCreate</strong>
+* <strong>PaymentTerminalLocationListResponse</strong>
 * <strong>PaymentTerminalLocationState</strong>
 * <strong>PaymentTerminalLocationVersion</strong>
 * <strong>PaymentTerminalLocationVersionState</strong>
-* <strong>PaymentTerminalPreparing</strong>
 * <strong>PaymentTerminalReceiptType</strong>
 * <strong>PaymentTerminalState</strong>
 * <strong>PaymentTerminalTransactionSum</strong>
@@ -2780,11 +2997,14 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>PaymentTerminalTransactionSummaryReference</strong>
 * <strong>PaymentTerminalType</strong>
 * <strong>PaymentTerminalUpdate</strong>
+* <strong>PayoutAccountInfo</strong>
 * <strong>Permission</strong>
 * <strong>PermissionListResponse</strong>
 * <strong>PermissionSearchResponse</strong>
 * <strong>PersistableCurrencyAmount</strong>
 * <strong>PersistableCurrencyAmountUpdate</strong>
+* <strong>PersonSalutation</strong>
+* <strong>PricingHistoryDto</strong>
 * <strong>ProductComponentGroupListResponse</strong>
 * <strong>ProductComponentGroupSearchResponse</strong>
 * <strong>ProductComponentListResponse</strong>
@@ -2826,17 +3046,21 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>RefundCommentListResponse</strong>
 * <strong>RefundCommentSearchResponse</strong>
 * <strong>RefundCreate</strong>
+* <strong>RefundDaysRange</strong>
 * <strong>RefundListResponse</strong>
+* <strong>RefundPercentageRange</strong>
 * <strong>RefundRecoveryBankTransaction</strong>
 * <strong>RefundRecoveryBankTransactionListResponse</strong>
 * <strong>RefundRecoveryBankTransactionSearchResponse</strong>
 * <strong>RefundSearchResponse</strong>
 * <strong>RefundState</strong>
 * <strong>RefundType</strong>
+* <strong>RelatedPerson</strong>
 * <strong>RenderedDocument</strong>
 * <strong>RenderedTerminalReceipt</strong>
 * <strong>RenderedTerminalReceiptListResponse</strong>
 * <strong>RenderedTerminalTransactionSummary</strong>
+* <strong>RepresentativeInfo</strong>
 * <strong>RestAddressFormat</strong>
 * <strong>RestAddressFormatField</strong>
 * <strong>RestApiBulkOperationResult</strong>
@@ -2848,10 +3072,12 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>RestCurrency</strong>
 * <strong>RestCustomerEmailAddress</strong>
 * <strong>RestLanguage</strong>
+* <strong>RestMember</strong>
 * <strong>ResultPortionModel</strong>
 * <strong>Role</strong>
 * <strong>RoleCreate</strong>
 * <strong>RoleListResponse</strong>
+* <strong>RoleRef</strong>
 * <strong>RoleSearchResponse</strong>
 * <strong>RoleState</strong>
 * <strong>RoleUpdate</strong>
@@ -2860,11 +3086,14 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>SalesChannelSearchResponse</strong>
 * <strong>Scope</strong>
 * <strong>ScopeSingleSignOnProvider</strong>
+* <strong>Setter</strong>
 * <strong>SingleSignOnUser</strong>
 * <strong>SingleSignOnUserCreate</strong>
 * <strong>SingleSignOnUserListResponse</strong>
 * <strong>SingleSignOnUserSearchResponse</strong>
 * <strong>SingleSignOnUserUpdate</strong>
+* <strong>SoleProprietorOwnershipType</strong>
+* <strong>SoleProprietorshipInfo</strong>
 * <strong>SortingOrder</strong>
 * <strong>Space</strong>
 * <strong>SpaceAddress</strong>
@@ -2874,9 +3103,12 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>SpaceSearchResponse</strong>
 * <strong>SpaceUpdate</strong>
 * <strong>SpaceView</strong>
+* <strong>StateListResponse</strong>
 * <strong>StaticValue</strong>
 * <strong>StaticValueListResponse</strong>
 * <strong>StaticValueSearchResponse</strong>
+* <strong>StoreTrialSubscriptionRequest</strong>
+* <strong>StoreTrialSubscriptionRequestSetter</strong>
 * <strong>SubmittedAnalyticsQueryExecution</strong>
 * <strong>Subscriber</strong>
 * <strong>SubscriberActive</strong>
@@ -2901,6 +3133,8 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>SubscriptionChargeState</strong>
 * <strong>SubscriptionChargeType</strong>
 * <strong>SubscriptionComponentConfiguration</strong>
+* <strong>SubscriptionComponentGroupConfigurationRequest</strong>
+* <strong>SubscriptionComponentGroupConfigurationRequestSetter</strong>
 * <strong>SubscriptionComponentReferenceConfiguration</strong>
 * <strong>SubscriptionCreateRequest</strong>
 * <strong>SubscriptionInitializeSubscriberPresentRequest</strong>
@@ -2931,6 +3165,7 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>SubscriptionProductComponentReferenceState</strong>
 * <strong>SubscriptionProductComponentUpdate</strong>
 * <strong>SubscriptionProductCreate</strong>
+* <strong>SubscriptionProductDto</strong>
 * <strong>SubscriptionProductRetirement</strong>
 * <strong>SubscriptionProductRetirementRequest</strong>
 * <strong>SubscriptionProductState</strong>
@@ -2979,6 +3214,7 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>TokenizedCardData</strong>
 * <strong>TokenizedCardDataCreate</strong>
 * <strong>TokenizedCardRequest</strong>
+* <strong>TrackingNumberRequest</strong>
 * <strong>Transaction</strong>
 * <strong>TransactionClientPlatformInformation</strong>
 * <strong>TransactionComment</strong>
@@ -3005,7 +3241,9 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>TransactionLineItemVersionCreate</strong>
 * <strong>TransactionLineItemVersionState</strong>
 * <strong>TransactionListResponse</strong>
+* <strong>TransactionOverview</strong>
 * <strong>TransactionPending</strong>
+* <strong>TransactionProjection</strong>
 * <strong>TransactionSearchResponse</strong>
 * <strong>TransactionState</strong>
 * <strong>TransactionUserInterfaceType</strong>
@@ -3016,13 +3254,22 @@ Additional Api models documentation: [*link*](https://checkout.postfinance.ch/en
 * <strong>TransactionVoidState</strong>
 * <strong>TwoFactorAuthenticationType</strong>
 * <strong>User</strong>
-* <strong>UserAccountRole</strong>
-* <strong>UserAccountRoleListResponse</strong>
-* <strong>UserSpaceRole</strong>
-* <strong>UserSpaceRoleListResponse</strong>
 * <strong>UserType</strong>
+* <strong>WalleejoinAdminPartnerConfigurationRequestDto</strong>
+* <strong>WalleejoinAdminPartnerConfigurationResponseDto</strong>
+* <strong>WalleejoinAdminPricingType</strong>
+* <strong>WalleejoinCreatePartnershipApiRequestDto</strong>
+* <strong>WalleejoinPartnership</strong>
+* <strong>WalleejoinPartnershipCreate</strong>
+* <strong>WalleejoinPartnershipResponseDto</strong>
+* <strong>WalleejoinPartnershipResponseDtoListResponse</strong>
+* <strong>WalleejoinPartnershipResponseDtoSearchResponse</strong>
+* <strong>WalleejoinPartnershipState</strong>
+* <strong>WalleejoinPartnershipType</strong>
+* <strong>WalleejoinPartnershipUpdate</strong>
 * <strong>WalletType</strong>
 * <strong>WebAppConfirmationResponse</strong>
+* <strong>WebUiAccountTheme</strong>
 * <strong>WebhookIdentity</strong>
 * <strong>WebhookListener</strong>
 * <strong>WebhookListenerCreate</strong>
